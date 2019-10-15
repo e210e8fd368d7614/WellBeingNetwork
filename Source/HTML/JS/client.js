@@ -1230,7 +1230,7 @@ function SaveValuesByArr(Arr,DopStr)
     }
 }
 var MapCurrency = {};
-MapCurrency[0] = "TERA";
+MapCurrency[0] = "WBN";
 MapCurrency[16] = "BTC";
 var bWasCodeSys = 0;
 var MapCurrencyCodeSys = {};
@@ -1239,10 +1239,10 @@ MapCurrencyIcon[0] = "./PIC/T.svg";
 MapCurrencyIcon[16] = "./PIC/B.svg";
 function InitMapCurrency()
 {
-    if(window.NETWORK_NAME === "TERA-TEST3")
+    if(window.NETWORK_NAME === "WBN-TEST3")
     {
         MapCurrency = {};
-        MapCurrency[0] = "TERA";
+        MapCurrency[0] = "WBN";
         MapCurrency[31] = "BTC";
         MapCurrency[59] = "USD";
     }

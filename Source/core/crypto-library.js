@@ -570,9 +570,9 @@ function TestMerkleProof(CountTest)
         var Hash2 = CheckMerkleProof(Ret.ArrL, ArrM, Ret.ArrR);
         ToLog("Hash2=" + GetHexFromArr(Hash2) + "  FirstNum=" + FirstNum + "/" + LastNum);
         if(CompareArr(Tree.Root, Hash2) !== 0)
-            throw ("=========ERROR HASHTEST==============");
+            throw ("===========ERROR HASHTEST============");
         else
-            ToLog("=========OK==============");
+            ToLog("============OK============");
     }
 }
 function GetMerkleProof(LevelsHash,FirstNum,LastNum)

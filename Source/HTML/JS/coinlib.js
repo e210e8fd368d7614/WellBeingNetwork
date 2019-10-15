@@ -8,8 +8,8 @@
  * Telegram:  https://t.me/terafoundation
 */
 
-var MAX_SUM_TER = 1e9;
-var MAX_SUM_CENT = 1e9;
+var MAX_SUM_TER = 6.3072e9;
+var MAX_SUM_CENT = 6.3072e9;
 function CHECKSUM(Coin)
 {
     if(!Coin.SumCOIN)
