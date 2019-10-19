@@ -100,7 +100,7 @@ module.exports = class CCode extends require("./base")
     }
     SetNewCodeVersion(Data, PrivateKey)
     {
-        var fname = GetDataPath("ToUpdate/wallet.zip");
+        var fname = GetDataPath("Update/wallet.zip");
         if(fs.existsSync(fname))
         {
             var fname2 = GetDataPath("Update/wallet-" + Data.VersionNum + ".zip");
