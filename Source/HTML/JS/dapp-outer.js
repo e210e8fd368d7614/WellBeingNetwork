@@ -101,7 +101,7 @@ function DappListener(event)
             }
         case "pay":
             {
-                AddToInvoiceList(Data);
+                ToLog("The method is deprecated and no longer supported.");
                 break;
             }
         case "setstorage":
@@ -125,12 +125,12 @@ function DappListener(event)
             }
         case "setcommon":
             {
-                CurStorage.setItem(DAPPPREFIX + Data.Key, JSON.stringify(Data.Value));
+                CurStorage.setItem(DAPPPREFIX + "COMMON-" + Data.Key, JSON.stringify(Data.Value));
                 break;
             }
         case "getcommon":
             {
-                Data.Value = CurStorage.getItem(DAPPPREFIX + Data.Key);
+                Data.Value = CurStorage.getItem(DAPPPREFIX + "COMMON-" + Data.Key);
                 if(Data.Value && Data.Value !== "undefined")
                     try
                     {

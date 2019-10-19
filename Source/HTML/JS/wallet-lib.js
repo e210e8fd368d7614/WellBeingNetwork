@@ -517,10 +517,10 @@ function GetInvoiceHTML(item,onclick,classstr)
     var idname = "idSendInvoice" + item.num;
     var value = "";
     if(item.Data.Amount)
-        value += "<B>" + item.Data.Amount + "</B> Tera";
+        value += "<B>" + escapeHtml(item.Data.Amount) + "</B> Tera";
     else
         value += "<B style='color:green'>No pay</B>";
-    value += "&#x00A;" + item.num + ". " + item.Data.name;
+    value += "&#x00A;" + item.num + ". " + escapeHtml(item.Data.name);
     return "<button id='" + idname + "' onclick='" + onclick + "' class='" + classstr + "'>" + value + "</button>";
 }
 function AddSendList(item)
@@ -617,7 +617,7 @@ function SendTrCreateAcc(Currency,PubKey,Description,Adviser,Smart,bFindAcc,bAdd
     {
         var Item = {name:Description, To:0, Amount:CONFIG_DATA.PRICE_DAO.NewAccount, Description:"Create acc: " + Description, Body:Body,
         };
-        AddToInvoiceList(Item);
+        AddToInvoiceList(Item, 1);
     }
     else
     {

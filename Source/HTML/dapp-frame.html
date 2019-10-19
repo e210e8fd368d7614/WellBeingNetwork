@@ -394,6 +394,8 @@
 
         function DoTranslate(Data)
         {
+            Data.Key="_"+Data.Key;
+
             var id=Data.Key;
             var div=$(id);
             if(div && div.innerText!==Data.Str)

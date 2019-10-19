@@ -8,7 +8,7 @@
  * Telegram:  https://t.me/terafoundation
 */
 
-window.CLIENT_VERSION = 11;
+window.CLIENT_VERSION = 13;
 function $(id)
 {
     return document.getElementById(id);
@@ -651,9 +651,10 @@ function LoadFromArr(Arr,Obj)
 var entityMap = {"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':'&quot;', "'":'&#39;', "/":'&#x2F;', "\n":'<BR>', " ":'&nbsp;', };
 function escapeHtml(string)
 {
+    string = String(string);
     string = string.replace(/\\n/g, "\n");
     string = string.replace(/\\"/g, "\"");
-    return String(string).replace(/[\s\n&<>"'\/]/g, function (s)
+    return string.replace(/[\s\n&<>"'\/]/g, function (s)
     {
         return entityMap[s];
     });
@@ -1306,7 +1307,7 @@ function GetTokenName(Num,Name)
     if(Num === undefined)
         return "---";
     else
-        return "" + Num + "." + String(Name).toLowerCase();
+        return "" + Num + "." + escapeHtml(Name).toLowerCase();
 }
 function CurrencyNameItem(Item)
 {
@@ -1322,7 +1323,7 @@ function CurrencyNameItem(Item)
         MapCurrency[Item.Currency] = Name;
     }
     if(Item.CurrencyObj && Item.CurrencyObj.TokenDescription)
-        Name += " : " + Item.CurrencyObj.TokenDescription;
+        Name += " : " + escapeHtml(Item.CurrencyObj.TokenDescription);
     return Name;
 }
 function CurrencyName(Num)
