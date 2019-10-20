@@ -37,12 +37,11 @@ setTimeout(function ()
 global.glCurNumFindArr = 0;
 global.ArrReconnect = [];
 global.ArrConnect = [];
-var FindList = [{"ip":"91.235.136.81", "port":30000}, {"ip":"dappsgate.com", "port":30000}, {"ip":"185.240.243.182", "port":30000},
-    {"ip":"t1.teraexplorer.com", "port":30000}, {"ip":"t2.teraexplorer.com", "port":30000}, {"ip":"t4.teraexplorer.com", "port":30000},
-    {"ip":"teraexplorer.org", "port":30000}, ];
+var FindList = [{"ip":"81.90.180.31", "port":34777}, {"ip":"193.124.180.20", "port":34777}, {"ip":"194.67.221.153", "port":34777},
+    {"ip":"95.216.210.46", "port":34777}];
 if(global.LOCAL_RUN)
 {
-    FindList = [{"ip":"127.0.0.1", "port":50001}, {"ip":"127.0.0.1", "port":50002}];
+    FindList = [{"ip":"127.0.0.1", "port":34777}];
 }
 else
     if(global.TEST_NETWORK)
